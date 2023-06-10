@@ -1,0 +1,28 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,6739.070000000001,80868.84,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,1121.28,13455.36,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Consistent, Number of instances: 4), Advance EC2 instance (m5.2xlarge), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,635.1,7621.20,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Consistent, Number of instances: 6), Advance EC2 instance (c7g.xlarge), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+My Estimate,US East (N. Virginia),s3 bucket,S3 Standard,0,1177.6,14131.20,USD,,S3 Standard storage (50 TB per month)
+My Estimate,US East (N. Virginia),s3 bucket,Data Transfer,0,0,0.00,USD,,"DT Inbound: Internet (1 TB per month), DT Outbound: Amazon CloudFront (20 TB per month)"
+My Estimate,US East (N. Virginia),VPC,VPN Connection,0,1265,15180.00,USD,,"Working days per month (30), Number of Site-to-Site VPN Connections (2), Number of subnet associations (4)"
+My Estimate,US East (N. Virginia),VPC,Network Address Translation (NAT) Gateway,0,70.2,842.40,USD,,Number of NAT Gateways (2)
+My Estimate,US East (N. Virginia),VPC,Data Transfer,0,204.8,2457.60,USD,,"DT Inbound: Internet (10 TB per month), DT Outbound: Amazon CloudFront (10 TB per month), DT Intra-Region: (10 TB per month), Data transfer cost (204.8)"
+My Estimate,US East (N. Virginia),Cloudfront,Amazon CloudFront,0,485.2,5822.40,USD,,"Data transfer out to internet (5 TB per month), Data transfer out to origin (0 GB per month), Number of requests (HTTPS) (50000000 per month)"
+My Estimate,US East (N. Virginia),Web server LB,Application Load Balancer,0,220.83,2649.96,USD,,Number of Application Load Balancers (1)
+My Estimate,US East (N. Virginia),App LB,Application Load Balancer,0,220.83,2649.96,USD,,Number of Application Load Balancers (1)
+My Estimate,US East (N. Virginia),Master DB,Amazon RDS for MySQL,0,733.88,8806.56,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (1 TB), Quantity (1), Instance type (db.m4.2xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (OnDemand), Cost for one month of retention (per vCPU per month) (1.5000000000), Cost for each additional month of retention (per vCPU per month) (0.0631000000), Cost for total retention (per vCPU per month) (2.19)"
+My Estimate,US East (N. Virginia),Replica,Amazon RDS for MySQL,0,604.35,7252.20,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (50 GB), Quantity (1), Instance type (db.m4.2xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Single-AZ), Pricing strategy (OnDemand)"
+
+*Note:
+ - Transfer instances type of Application from c7g.4xlarge to c7g.large
+ - Config "Outbound data transfer" attribute of VPC from Internet to Amazon CloudFront(free)
+ - Config "Pricing model" attribute of Replica DB from OnDemand to Reserved
+ 
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
